@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sarthak Enterprises</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link id="favicon" rel="icon" type="image/x-icon" href="favicon2.ico" />
+    <script>
+      const favicon = document.getElementById("favicon");
+      const img = new Image();
+      img.onload = function () {
+        favicon.href = "private/favicon2.ico";
+      };
+      img.onerror = function () {
+        favicon.href = "favicon.ico";
+      };
+      img.src = "favicon2.ico";
+    </script>
+  </head>
+  <body>
+    <app-root> </app-root>
+  </body>
+</html>

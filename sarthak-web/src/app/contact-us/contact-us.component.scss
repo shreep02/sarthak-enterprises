@@ -1,0 +1,121 @@
+/* Contact Page Layout */
+.contact-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+/* Left Section - Contact Info */
+.contact-left {
+  width: 50%;
+  padding: 40px;
+  background-color: #f7f7f7; /* Soft Light Gray */
+  color: #444; /* Dark Gray */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-left h1,
+.contact-left h2 {
+  color: #002147; /* Dark Navy Blue */
+  margin-bottom: 15px;
+}
+
+.contact-left p,
+.contact-left ul {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.contact-left a {
+  color: #008080; /* Teal for links */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-left ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-left ul li {
+  margin-bottom: 5px;
+}
+
+/* Google Maps Button */
+.map-button {
+  margin-top: 20px;
+}
+
+.map-button a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #008080; /* Teal */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.map-button a:hover {
+  background-color: #006666; /* Darker Teal */
+  transition: 0.3s ease;
+}
+
+/* Right Section - Contact Form */
+.contact-right {
+  width: 50%;
+  padding: 40px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-right h1 {
+  color: #002147; /* Dark Navy Blue */
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #002147; /* Dark Navy */
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #444; /* Dark Gray */
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  background-color: #008080; /* Teal */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #006666; /* Darker Teal */
+  transition: 0.3s ease;
+}

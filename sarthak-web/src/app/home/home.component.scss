@@ -1,0 +1,18 @@
+.home-container {
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-image: url("/home-bg.jpg");
+  background-size: 100% auto; /* Ensure the image covers the entire width */
+  background-position: center center; /* Keep the image centered */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+
+  background-attachment: fixed; /* Keeps the background fixed on scroll */
+
+  position: relative;
+}
