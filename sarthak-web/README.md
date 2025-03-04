@@ -36,7 +36,7 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
+## Running unit tests -NO Need
 
 To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
 
@@ -44,7 +44,7 @@ To execute unit tests with the [Karma](https://karma-runner.github.io) test runn
 ng test
 ```
 
-## Running end-to-end tests
+## Running end-to-end tests: No need
 
 For end-to-end (e2e) testing, run:
 
@@ -67,17 +67,14 @@ This document outlines the steps to set up and configure your Angular 19 project
 Ensure that the following file structure is followed for the project:
 
 ```
-src/
-├── assets/
-│   ├── images/
-│   │   ├── ceo.jpg
-│   │   ├── favicon.ico
-│   │   ├── logo.png
 ├── public/
 │   ├── contact_info.json
-└── private/
-    └── contact_info.json
-```
+└── public/private/
+     └── contact_info.json
+     ├── ceo.jpg
+     ├── favicon.ico
+     ├── logo.png
+
 
 ### Important Files
 
@@ -86,23 +83,25 @@ src/
    The `contact_info.json` file holds essential company and contact information. Below is the structure of the JSON file that you need to customize.
 
 ```
+
 {
-  "GSTIN": "YOUR_GSTIN_HERE",
-  "CIN": "YOUR_CIN_HERE",
-  "COMPANY_NAME": "YOUR_NAME_HERE",
-  "CEO_NAME": "YOUR_CEO_NAME_HERE",
-  "ADDRESS": "YOUR_ADDRESS_HERE",
-  "CONTACT_NO": "YOUR_CONTACT_NO_HERE",
-  "EMAIL": "YOUR_EMAIL_HERE",
-  "MAP": "YOUR_MAP"
+"GSTIN": "YOUR_GSTIN_HERE",
+"CIN": "YOUR_CIN_HERE",
+"COMPANY_NAME": "YOUR_NAME_HERE",
+"CEO_NAME": "YOUR_CEO_NAME_HERE",
+"ADDRESS": "YOUR_ADDRESS_HERE",
+"CONTACT_NO": "YOUR_CONTACT_NO_HERE",
+"EMAIL": "YOUR_EMAIL_HERE",
+"MAP": "YOUR_MAP"
 }
+
 ```
 
 Replace the placeholder values (`YOUR_GSTIN_HERE`, `YOUR_CIN_HERE`, etc.) with your actual company information.
 
-2. **Images** (stored under `src/assets/images/`)
+2. **Images** (stored under `public/private`)
 
-   Add the following images to the `assets/images/` directory:
+   Add the following images to the `public/private/` directory:
 
    - `ceo.jpg`: A picture of your CEO.
    - `favicon.ico`: Your website's favicon.
@@ -117,8 +116,10 @@ Make sure these images are properly named and placed in the correct directory.
 Clone the Angular 19 project repository to your local machine:
 
 ```
+
 git clone <repository_url>
 cd <project_directory>
+
 ```
 
 ### Step 2: Install dependencies
@@ -126,7 +127,9 @@ cd <project_directory>
 Once you've cloned the repository, navigate to the project folder and install the required dependencies using the following command:
 
 ```
+
 npm install
+
 ```
 
 ### Step 3: Add Company Information
@@ -143,7 +146,9 @@ Place the images (`ceo.jpg`, `favicon.ico`, and `logo.png`) in the `src/assets/i
 To run the application locally, execute the following command:
 
 ```
+
 ng serve
+
 ```
 
 Visit `http://localhost:4200` in your browser to see the application running.
@@ -153,7 +158,9 @@ Visit `http://localhost:4200` in your browser to see the application running.
 To build the application for production, use the following command:
 
 ```
+
 ng build --prod
+
 ```
 
 This will generate an optimized production build in the `dist/` directory.
@@ -161,3 +168,4 @@ This will generate an optimized production build in the `dist/` directory.
 ## Conclusion
 
 After completing the above steps, your Angular 19 project should be set up and ready to use with the provided company information and images.
+```

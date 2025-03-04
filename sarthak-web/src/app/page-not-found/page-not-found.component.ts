@@ -3,17 +3,9 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-page-not-found',
-  template: `<h2>Page Not Found! Redirecting to Home...</h2>`,
+  templateUrl: './page-not-found.component.html',
   imports: [],
-  styles: [
-    `
-      h2 {
-        text-align: center;
-        margin-top: 50px;
-        color: red;
-      }
-    `,
-  ],
+  styleUrl: './page-not-found.component.scss',
 })
 export class PageNotFoundComponent {
   constructor(private router: Router) {
