@@ -36,14 +36,14 @@
 .about-right h1 {
   font-size: 36px;
   font-weight: bold;
-  color: #0066cc; /* Blue */
+  color: rgb(33, 5, 59);
   margin-bottom: 20px;
 }
 
 .about-right h2 {
   font-size: 26px;
   font-weight: 600;
-  color: #0066cc; /* Blue */
+  color: rgb(33, 5, 59);
   margin-bottom: 15px;
 }
 
@@ -91,4 +91,15 @@
   background-color: #004d99; /* Darker Blue */
   cursor: pointer;
   transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+  }
 }

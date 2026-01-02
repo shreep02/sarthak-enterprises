@@ -1,6 +1,6 @@
 <nav class="navbar">
   <div class="logo">
-    <a routerLink="/home">
+    <a routerLink="/home" (click)="closeMenu()">
       <img
         src="private/logo.png"
         alt="First Logo"
@@ -8,12 +8,15 @@
       />
     </a>
   </div>
-  <ul>
-    <li><a routerLink="/about">About Us</a></li>
-    <li><a routerLink="/services">Services</a></li>
-    <li><a routerLink="/projects">Projects</a></li>
-    <li><a routerLink="/credentials">credentials</a></li>
-    <li><a routerLink="/organisation">Organisation</a></li>
-    <li><a routerLink="/contact">Contact Us</a></li>
+  <div class="menu-toggle" (click)="toggleMenu()">
+    <div class="hamburger"></div>
+  </div>
+  <ul [class.active]="isMenuOpen">
+    <li><a routerLink="/about" (click)="closeMenu()">About Us</a></li>
+    <li><a routerLink="/services" (click)="closeMenu()">Services</a></li>
+    <li><a routerLink="/projects" (click)="closeMenu()">Projects</a></li>
+    <li><a routerLink="/credentials" (click)="closeMenu()">credentials</a></li>
+    <li><a routerLink="/organisation" (click)="closeMenu()">Organisation</a></li>
+    <li><a routerLink="/contact" (click)="closeMenu()">Contact Us</a></li>
   </ul>
 </nav>

@@ -19,7 +19,7 @@
 
 .contact-left h1,
 .contact-left h2 {
-  color: #002147; /* Dark Navy Blue */
+  color: #7b4f4ff4;
   margin-bottom: 15px;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .contact-left a {
-  color: #008080; /* Teal for links */
+  color: #7b4f4ff4;
   text-decoration: none;
   font-weight: 500;
 }
@@ -52,7 +52,7 @@
 .map-button a {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #008080; /* Teal */
+  background-color: #784848f4;
   color: white;
   border-radius: 5px;
   text-decoration: none;
@@ -60,7 +60,7 @@
 }
 
 .map-button a:hover {
-  background-color: #006666; /* Darker Teal */
+  background-color: #331f1ff4;
   transition: 0.3s ease;
 }
 
@@ -75,7 +75,7 @@
 }
 
 .contact-right h1 {
-  color: #002147; /* Dark Navy Blue */
+  color: #7b4f4ff4;
   margin-bottom: 20px;
 }
 
@@ -100,12 +100,17 @@ textarea {
   color: #444; /* Dark Gray */
 }
 
+input::placeholder,
+textarea::placeholder {
+  font-family: "Lato", sans-serif;
+}
+
 textarea {
   resize: none;
 }
 
 button {
-  background-color: #008080; /* Teal */
+  background-color: #784848f4;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -116,6 +121,6 @@ button {
 }
 
 button:hover {
-  background-color: #006666; /* Darker Teal */
+  background-color: #331f1ff4;
   transition: 0.3s ease;
 }
