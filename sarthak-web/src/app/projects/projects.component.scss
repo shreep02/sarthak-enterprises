@@ -7,7 +7,7 @@
 
 .section-title {
   font-size: 36px;
-  color: #0066cc;
+  color: #7b4f4ff4;
   margin-bottom: 40px;
   font-weight: bold;
 }
@@ -56,7 +56,7 @@
 
 .project-content h3 {
   font-size: 24px;
-  color: #0066cc;
+  color: #ffb703;
   margin-bottom: 15px;
 }
 
@@ -70,4 +70,15 @@
   font-size: 17px;
   color: #555;
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 30px 5%;
+  }
+
+  .project-image,
+  .project-content {
+    width: 100%;
+  }
 }

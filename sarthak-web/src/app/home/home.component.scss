@@ -8,7 +8,7 @@
   text-align: center;
   color: white;
   background-image: url("/home-bg.jpg");
-  background-size: 100% auto; /* Ensure the image covers the entire width */
+  background-size: cover; /* Ensure the image covers the entire container */
   background-position: center center; /* Keep the image centered */
   background-repeat: no-repeat; /* Prevent repeating the image */
 

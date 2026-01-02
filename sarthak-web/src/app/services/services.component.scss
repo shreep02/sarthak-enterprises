@@ -7,7 +7,7 @@
 
 .section-title {
   font-size: 36px;
-  color: #0066cc;
+  color: #7b4f4ff4;
   margin-bottom: 40px;
   font-weight: bold;
 }
@@ -57,4 +57,21 @@
 
 .reverse {
   flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .service,
+  .reverse {
+    flex-direction: column;
+  }
+
+  .service-image,
+  .service-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .service-content {
+    text-align: center;
+  }
 }
