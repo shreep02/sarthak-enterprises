@@ -6,3 +6,10 @@ body.noscroll {
 body {
   font-family: "Roboto", sans-serif;
 }
+
+/* Responsive typography */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
