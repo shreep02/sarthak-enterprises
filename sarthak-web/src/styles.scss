@@ -1,29 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-
-body.noscroll {
-  position: fixed;
-  overflow: hidden;
+:root {
+  --primary-color: #0056b3;
+  --primary-color: rgba(123, 79, 79, 0.9568627451);
+  --text-color: black;
+  --bg-light: #f9f9f9;
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  text-align: center;
 }
 
-/* Responsive typography */
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+
+  &:hover {
+    opacity: 0.9;
+    color: white;
   }
 }
 
-/* Responsive typography */
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+
+  &:hover {
+    background-color: var(--primary-color);
+    color: white;
   }
 }

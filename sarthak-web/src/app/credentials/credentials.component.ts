@@ -1,9 +1,11 @@
 import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { CompanyInfo, ContactInfoService } from '../contact-info.service';
 
 @Component({
   selector: 'app-credentials',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './credentials.component.html',
   styleUrl: './credentials.component.scss',
 })

@@ -2,19 +2,13 @@
   <div class="contact-left">
     <h1>Locate Us</h1>
     <p>
-      <strong>Address:</strong>
+      <strong>Registered Address:</strong>
       {{ contactInfo?.["ADDRESS"] || "Not Available" }}
     </p>
 
     <h2>Call Us</h2>
     <p>
       <strong>New Enquiries:</strong>
-      <a [href]="'tel:' + (contactInfo?.['CONTACT_NO'] || '')">
-        {{ contactInfo?.["CONTACT_NO"] || "Not Available" }}
-      </a>
-    </p>
-    <p>
-      <strong>Contract:</strong>
       <a [href]="'tel:' + (contactInfo?.['CONTACT_NO'] || '')">
         {{ contactInfo?.["CONTACT_NO"] || "Not Available" }}
       </a>
@@ -34,53 +28,108 @@
         </a>
       </li>
     </ul>
-
-    <div class="map-button">
-      <a [href]="contactInfo?.['MAP'] || '#'" target="_blank">
-        Find on Google Maps
-      </a>
-    </div>
   </div>
 
   <div class="contact-right">
     <h1>Contact Us</h1>
-    <form>
+    <form (ngSubmit)="contactForm.valid && sendMessage()" #contactForm="ngForm">
       <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" placeholder="Enter your name" required />
+        <label for="name">Full Name <span class="required">*</span></label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="formData.name"
+          placeholder="Enter your name"
+          #name="ngModel"
+          required
+        />
+        <div
+          *ngIf="name.invalid && (name.dirty || name.touched)"
+          class="error-message"
+        >
+          <div *ngIf="name.errors?.['required']">Name is required.</div>
+        </div>
       </div>
 
       <div class="form-group">
-        <label for="email">Email</label>
+        <label for="email">Email <span class="required">*</span></label>
         <input
           type="email"
           id="email"
+          name="email"
+          [(ngModel)]="formData.email"
           placeholder="Enter your email"
+          #email="ngModel"
+          pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
           required
         />
+        <div
+          *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="error-message"
+        >
+          <div *ngIf="email.errors?.['required']">Email is required.</div>
+          <div *ngIf="email.errors?.['pattern']">
+            Please enter a valid email address.
+          </div>
+        </div>
       </div>
 
       <div class="form-group">
-        <label for="phone">Phone Number</label>
+        <label for="phone">Phone Number <span class="required">*</span></label>
         <input
           type="tel"
           id="phone"
+          name="phone"
+          [(ngModel)]="formData.phone"
           placeholder="Enter your phone number"
+          #phone="ngModel"
+          pattern="^[0-9\+\-\s]{10,}$"
           required
         />
+        <div
+          *ngIf="phone.invalid && (phone.dirty || phone.touched)"
+          class="error-message"
+        >
+          <div *ngIf="phone.errors?.['required']">
+            Phone number is required.
+          </div>
+          <div *ngIf="phone.errors?.['pattern']">
+            Please enter a valid phone number (at least 10 digits).
+          </div>
+        </div>
       </div>
 
       <div class="form-group">
-        <label for="message">Message</label>
+        <label for="message">Message <span class="required">*</span></label>
         <textarea
           id="message"
+          name="message"
+          [(ngModel)]="formData.message"
           rows="4"
+          #message="ngModel"
+          minlength="10"
           placeholder="Write your message here..."
           required
         ></textarea>
+        <div
+          *ngIf="message.invalid && (message.dirty || message.touched)"
+          class="error-message"
+        >
+          <div *ngIf="message.errors?.['required']">Message is required.</div>
+          <div *ngIf="message.errors?.['minlength']">
+            Message must be at least 10 characters long.
+          </div>
+        </div>
       </div>
 
-      <button type="submit">Send Message</button>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="contactForm.invalid"
+      >
+        Send Message
+      </button>
     </form>
   </div>
 </div>
