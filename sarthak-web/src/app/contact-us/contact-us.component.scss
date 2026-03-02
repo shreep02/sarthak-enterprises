@@ -1,126 +1,123 @@
-/* Contact Page Layout */
 .contact-container {
   display: flex;
-  min-height: 100vh;
-  flex-direction: row;
-  align-items: stretch;
-}
-
-/* Left Section - Contact Info */
-.contact-left {
-  width: 50%;
-  padding: 40px;
-  background-color: #f7f7f7; /* Soft Light Gray */
-  color: #444; /* Dark Gray */
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-}
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 
-.contact-left h1,
-.contact-left h2 {
-  color: #7b4f4ff4;
-  margin-bottom: 15px;
-}
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 4rem;
+  }
 
-.contact-left p,
-.contact-left ul {
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
+  h1 {
+    color: rgba(123, 79, 79, 0.9568627451);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
 
-.contact-left a {
-  color: #7b4f4ff4;
-  text-decoration: none;
-  font-weight: 500;
-}
+  h2 {
+    color: rgba(123, 79, 79, 0.9568627451);
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
 
-.contact-left ul {
-  list-style-type: none;
-  padding: 0;
-}
+  p,
+  li {
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
 
-.contact-left ul li {
-  margin-bottom: 5px;
-}
+  a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
 
-/* Google Maps Button */
-.map-button {
-  margin-top: 20px;
-}
+    &:hover {
+      color: rgba(123, 79, 79, 0.9568627451);
+      text-decoration: underline;
+    }
+  }
 
-.map-button a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #784848f4;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-}
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 
-.map-button a:hover {
-  background-color: #331f1ff4;
-  transition: 0.3s ease;
-}
+  .contact-left {
+    flex: 1;
+  }
 
-/* Right Section - Contact Form */
-.contact-right {
-  width: 50%;
-  padding: 40px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  .contact-right {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    box-sizing: border-box;
 
-.contact-right h1 {
-  color: #7b4f4ff4;
-  margin-bottom: 20px;
-}
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
 
-.form-group {
-  margin-bottom: 15px;
-}
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
 
-label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 5px;
-  color: #002147; /* Dark Navy */
-}
+      label {
+        font-weight: bold;
+        color: #555;
+      }
 
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #444; /* Dark Gray */
-}
+      .required {
+        color: #d32f2f;
+      }
 
-input::placeholder,
-textarea::placeholder {
-  font-family: "Lato", sans-serif;
-}
+      input,
+      textarea {
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-family: inherit;
 
-textarea {
-  resize: none;
-}
+        &:focus {
+          outline: none;
+          border-color: rgba(123, 79, 79, 0.9568627451);
+          box-shadow: 0 0 0 2px rgba(123, 79, 79, 0.1);
+        }
+      }
 
-button {
-  background-color: #784848f4;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 17px;
-  cursor: pointer;
-  font-weight: bold;
-}
+      .error-message {
+        color: #d32f2f;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+      }
+    }
 
-button:hover {
-  background-color: #331f1ff4;
-  transition: 0.3s ease;
+    .btn-primary {
+      background-color: rgba(123, 79, 79, 0.9568627451);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: darken(rgba(123, 79, 79, 0.9568627451), 10%);
+      }
+    }
+  }
 }

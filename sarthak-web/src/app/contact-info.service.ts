@@ -17,7 +17,7 @@ export interface CompanyInfo {
   providedIn: 'root',
 })
 export class ContactInfoService {
-  private primaryJsonUrl = 'private/contact_info.json';
+  private primaryJsonUrl = 'assets/private/contact_info.json';
   private fallbackJsonUrl = 'contact_info-example.json';
 
   constructor(private http: HttpClient) {}
@@ -26,10 +26,10 @@ export class ContactInfoService {
     return this.http.get<CompanyInfo>(this.primaryJsonUrl).pipe(
       catchError((error) => {
         console.warn(
-          `Primary JSON not found, switching to fallback: ${error.message}`
+          `Primary JSON not found, switching to fallback: ${error.message}`,
         );
         return this.http.get<CompanyInfo>(this.fallbackJsonUrl);
-      })
+      }),
     );
   }
 }

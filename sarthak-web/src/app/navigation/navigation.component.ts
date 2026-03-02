@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -12,11 +13,19 @@ import { CommonModule } from '@angular/common';
 export class NavigationComponent {
   isMenuOpen = false;
 
+  constructor(@Inject(DOCUMENT) private document: Document) {}
+
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    if (this.isMenuOpen) {
+      this.document.body.classList.add('noscroll');
+    } else {
+      this.document.body.classList.remove('noscroll');
+    }
   }
 
   closeMenu() {
     this.isMenuOpen = false;
+    this.document.body.classList.remove('noscroll');
   }
 }

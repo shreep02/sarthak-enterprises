@@ -1,4 +1,57 @@
-<div class="home-container">
-  <h1>Welcome to {{ contactInfo?.["COMPANY_NAME"] || "Not Available" }}</h1>
-  <p>Your trusted partner in business.</p>
-</div>
+<!-- New Split Hero Section -->
+<section class="hero">
+  <div class="hero-text">
+    <h1 class="hero-title">
+      Welcome to {{ contactInfo?.["COMPANY_NAME"] || "Sarthak Enterprises" }}
+    </h1>
+    <p class="hero-subtitle">
+      Your trusted partner for innovative and reliable solutions.
+    </p>
+    <a routerLink="/contact" class="btn btn-primary">Get in Touch</a>
+  </div>
+  <div class="hero-image">
+    <img src="assets/home-bg.jpg" alt="Sarthak Enterprises office" />
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="container services-overview">
+  <h2 class="section-title">Our Services</h2>
+  <div class="service-cards">
+    <div class="service-card">
+      <img src="assets/solar.jpg" alt="Solar Power" />
+      <h3>Solar Power</h3>
+      <p>Leading-edge solar power solutions for a sustainable future.</p>
+    </div>
+    <div class="service-card">
+      <img src="assets/infrastructure.jpg" alt="Infrastructure" />
+      <h3>Infrastructure</h3>
+      <p>Robust and scalable infrastructure development projects.</p>
+    </div>
+    <div class="service-card">
+      <img src="assets/manpower.jpg" alt="Manpower Supply" />
+      <h3>Manpower Supply</h3>
+      <p>Providing skilled and reliable manpower for your business needs.</p>
+    </div>
+  </div>
+  <a routerLink="/services" class="btn btn-secondary">Explore All Services</a>
+</section>
+
+<!-- About Us Section -->
+<section class="container about-overview">
+  <h2 class="section-title">About Sarthak Enterprises</h2>
+  <p>
+    With a legacy of excellence and a commitment to innovation, Sarthak
+    Enterprises has been a cornerstone in the industry. We believe in building
+    strong client relationships by delivering quality and value in every project
+    we undertake.
+  </p>
+  <a routerLink="/about" class="btn btn-secondary">Learn More About Us</a>
+</section>
+
+<!-- Final CTA -->
+<section class="cta-final">
+  <h2 class="section-title">Ready to Start a Project?</h2>
+  <p>Let's work together to bring your vision to life.</p>
+  <a routerLink="/contact" class="btn btn-primary">Contact Us Now</a>
+</section>

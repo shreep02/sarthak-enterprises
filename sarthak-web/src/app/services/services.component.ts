@@ -1,33 +1,32 @@
-import { animate, style, transition, trigger } from '@angular/animations';
-import { CommonModule, NgClass } from '@angular/common';
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-services',
-  standalone: true, // ✅ Ensures it's a standalone component
-  imports: [CommonModule, NgClass], // ✅ Add CommonModule here
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './services.component.html',
-  styleUrl: './services.component.scss',
+  styleUrls: ['./services.component.scss'],
 })
 export class ServicesComponent {
   services = [
     {
-      title: 'Solar Panel Installations',
+      title: 'Infrastructure & Construction Projects',
       description:
-        'We specialize in the installation of high-efficiency solar panels for residential, commercial, and industrial clients, ensuring maximum energy savings.',
-      image: 'solar.jpg',
-    },
-    {
-      title: 'Infrastructure  & Construction Projects',
-      description:
-        'Our expertise in large-scale infrastructure projects helps build sustainable and modern structures, including roads, bridges, and commercial buildings.',
-      image: 'infrastructure.jpg',
+        'Delivering high-quality infrastructure development and construction solutions, ensuring durability and excellence in every project.',
+      image: 'assets/infrastructure.jpg',
     },
     {
       title: 'Skilled Manpower Services',
       description:
-        'We provide highly skilled manpower for various industries, including construction, electrical work, and mechanical services, ensuring quality and reliability.',
-      image: 'manpower.jpg',
+        'Providing highly skilled and reliable workforce solutions tailored to meet the specific demands of various industries.',
+      image: 'assets/manpower.jpg',
+    },
+    {
+      title: 'Solar Panel Installations',
+      description:
+        'Implementing sustainable energy solutions with professional solar panel installation services for residential and commercial properties.',
+      image: 'assets/solar.jpg',
     },
   ];
 }

@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { CompanyInfo, ContactInfoService } from '../contact-info.service';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
