@@ -60,15 +60,17 @@
 .service-card {
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .service-card img {
@@ -104,7 +106,7 @@
 
 // Final CTA Section
 .cta-final {
-  background-color: var(--primary-color);
+  background-color: blue($color: #000000);
   color: var(--text-light-color);
   padding: 3rem 1rem;
   text-align: center;
@@ -138,7 +140,7 @@
   .hero-image {
     flex: 1;
   }
-  
+
   .hero-image img {
     height: 100%;
   }

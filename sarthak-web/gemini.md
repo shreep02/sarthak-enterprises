@@ -4,10 +4,10 @@
 
 ## 0. 📝 CURRENT SESSION CONTEXT (Update this section to save state)
 
-- **Current Goal:** Revert theme color to Blue.
-- **Last Successful Step:** Added global button styles (but with wrong color).
-- **Current Error/Blocker:** User prefers Blue buttons/footer over the reddish brand color.
-- **Next Step:** Update CSS variables and generate Navigation/Footer.
+- **Current Goal:** Configure git to ignore the context file.
+- **Last Successful Step:** Added gemini.md to .gitignore.
+- **Current Error/Blocker:** None.
+- **Next Step:** Verify mobile responsiveness.
 
 ## 1. Project Overview
 
@@ -42,7 +42,7 @@
 - **Error Handling:** Always wrap asynchronous calls in try/catch blocks or use `.catch()` for Promises. Use Angular's built-in error handling mechanisms where appropriate.
 - **Responsiveness:** Implement mobile-first CSS. Styles should target mobile by default, with media queries (using `min-width`) to add or adjust styles for larger screens.
 - **Typography & Colors:**
-  - Use `#0056b3` (Corporate Blue) for all headers, titles, buttons, and navigation text.
+  - Use `rgba(123, 79, 79, 0.9568627451)` for all headers, titles, buttons, and navigation text.
   - Use `black` for all paragraph text.
 
 ## 5. Strict Rules for AI Generation
