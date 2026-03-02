@@ -1,0 +1,41 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-section">
+      <h3>Sarthak Enterprises</h3>
+      <p>
+        Your trusted partner for innovative and reliable solutions in
+        Infrastructure, Manpower, and Solar Energy.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/about">About Us</a></li>
+        <li><a routerLink="/services">Services</a></li>
+        <li><a routerLink="/projects">Projects</a></li>
+        <li><a routerLink="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact Info</h3>
+      <p>
+        <strong>Phone:</strong>
+        {{ contactInfo?.["CONTACT_NO"] || "Not Available" }}
+      </p>
+      <p>
+        <strong>Email:</strong> {{ contactInfo?.["EMAIL"] || "Not Available" }}
+      </p>
+      <p>
+        <strong>Registered Address:</strong>
+        {{ contactInfo?.["ADDRESS"] || "Not Available" }}
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; {{ 2024 }} Sarthak Enterprises. All rights reserved.</p>
+  </div>
+</footer>
