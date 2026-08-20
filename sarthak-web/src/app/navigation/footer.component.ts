@@ -13,6 +13,7 @@ import { CompanyInfo, ContactInfoService } from '../contact-info.service';
 export class FooterComponent {
   private contactInfoService: ContactInfoService = inject(ContactInfoService);
   contactInfo?: CompanyInfo;
+  currentYear = new Date().getFullYear();
 
   constructor() {
     this.contactInfoService.getCompanyInfo().subscribe((data) => {

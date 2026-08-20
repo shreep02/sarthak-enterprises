@@ -1,16 +1,20 @@
 <section class="projects-container">
   <div class="container">
-    <h1>Our Projects</h1>
+    <p class="eyebrow">Completed work</p>
+    <h1>Projects that reflect our execution standards.</h1>
     <p class="intro-text">
-      A showcase of our successful projects and ongoing initiatives.
+      We build practical, high-impact solutions across infrastructure, solar
+      energy, and industrial support functions.
     </p>
 
     <div class="projects-grid">
       <div class="project-card" *ngFor="let project of projects">
         <img [src]="project.image" [alt]="project.name" class="project-image" />
-        <h2>{{ project.name }}</h2>
-        <span class="category">{{ project.category }}</span>
-        <p>{{ project.description }}</p>
+        <div class="project-body">
+          <h2>{{ project.name }}</h2>
+          <span class="category">{{ project.category }}</span>
+          <p>{{ project.description }}</p>
+        </div>
       </div>
     </div>
   </div>

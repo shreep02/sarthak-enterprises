@@ -33,9 +33,10 @@ export class ContactUsComponent implements OnInit {
 
   sendMessage() {
     const { name, email, phone, message } = this.formData;
+    const toEmail = this.contactInfo?.EMAIL || 'entp.sarthak@gmail.com';
     const subject = `New Inquiry from ${name}`;
     const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`;
-    const mailtoLink = `mailto:entp.sarthak@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
   }
 }
