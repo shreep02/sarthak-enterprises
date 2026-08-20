@@ -44,3 +44,4 @@ Thumbs.db
 #private files
 # to go public : public/private/
 rules.md
+.project-context.md

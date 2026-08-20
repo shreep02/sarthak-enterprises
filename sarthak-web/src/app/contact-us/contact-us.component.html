@@ -1,33 +1,38 @@
 <div class="contact-container">
   <div class="contact-left">
-    <h1>Locate Us</h1>
-    <p>
-      <strong>Registered Address:</strong>
-      {{ contactInfo?.["ADDRESS"] || "Not Available" }}
+    <p class="eyebrow">Get in touch</p>
+    <h1>We are here to help.</h1>
+    <p class="lead-copy">
+      Whether you need a project consultation, manpower support, or a solar
+      solution, our team is ready to assist.
     </p>
 
-    <h2>Call Us</h2>
-    <p>
-      <strong>New Enquiries:</strong>
-      <a [href]="'tel:' + (contactInfo?.['CONTACT_NO'] || '')">
-        {{ contactInfo?.["CONTACT_NO"] || "Not Available" }}
-      </a>
-    </p>
-    <p>
-      <strong>Email:</strong>
-      <a [href]="'mailto:' + (contactInfo?.EMAIL || '')">
-        {{ contactInfo?.EMAIL || "Not Available" }}
-      </a>
-    </p>
+    <div class="info-block">
+      <h2>Visit us</h2>
+      <p>
+        <strong>Registered Address:</strong><br />
+        {{ contactInfo?.["ADDRESS"] || "Not Available" }}
+      </p>
+    </div>
 
-    <h2>Mail Us</h2>
-    <ul>
-      <li>
-        <a [href]="'mailto:' + (contactInfo?.['EMAIL'] || '')">
-          {{ contactInfo?.["EMAIL"] || "Not Available" }}
+    <div class="info-block">
+      <h2>Call us</h2>
+      <p>
+        <strong>New Enquiries:</strong>
+        <a [href]="'tel:' + (contactInfo?.['CONTACT_NO'] || '')">
+          {{ contactInfo?.["CONTACT_NO"] || "Not Available" }}
         </a>
-      </li>
-    </ul>
+      </p>
+    </div>
+
+    <div class="info-block">
+      <h2>Email us</h2>
+      <p>
+        <a [href]="'mailto:' + (contactInfo?.EMAIL || '')">
+          {{ contactInfo?.EMAIL || "Not Available" }}
+        </a>
+      </p>
+    </div>
   </div>
 
   <div class="contact-right">

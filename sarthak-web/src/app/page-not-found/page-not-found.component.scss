@@ -1,5 +1,44 @@
-  h2 {
-        text-align: center;
-        margin-top: 50px;
-        color: var(--header-text-color);
-      }
+.not-found-container {
+  min-height: 50vh;
+  display: grid;
+  place-items: center;
+  padding: 3rem 1rem;
+}
+
+.not-found-box {
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  border-radius: 24px;
+  border: 1px solid rgba(123, 79, 79, 0.08);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow-soft);
+}
+
+.eyebrow {
+  margin: 0 0 0.8rem;
+  color: var(--primary-color);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  color: var(--primary-deep);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.redirect-note {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
